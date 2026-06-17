@@ -1,81 +1,141 @@
-# 🎯 DetectAI v2.0 — YOLOv8 Object Detection Web App
+# 🚀 DetectAI V2 – Real-Time Object Detection & Analytics Platform
 
-A modern upgrade of a YOLOv4+Tkinter project, rebuilt with YOLOv8 and Streamlit for 2025/26 placements.
+DetectAI V2 is a modern computer vision application built using **YOLOv8**, **Streamlit**, and **OpenCV**. The platform enables real-time object detection on images and live webcam feeds while providing analytics, object statistics, and export functionality.
 
-## Features
+## 📌 Features
 
-| Feature | Description |
-|---------|-------------|
-| 📷 Image Detection | Upload single or multiple images, get annotated results |
-| 🎥 Live Camera | Real-time webcam detection with FPS overlay |
-| 📊 Analytics | Session-wide dashboard — class distribution, confidence charts |
-| ⬇️ Export | CSV, YOLO .txt annotations, annotated JPEG |
-| ⚙️ Model Config | Switch between yolov8n/s/m/l/x, tune conf & IoU thresholds |
+### 🖼️ Image Detection
 
-## Quick Start
+* Upload single or multiple images
+* Detect objects using YOLOv8
+* Bounding box visualization
+* Confidence score display
+* Previous/Next image navigation
+* Export results as CSV
+
+### 📹 Live Camera Detection
+
+* Real-time webcam object detection
+* Live object counting
+* FPS monitoring
+* Session-based detection history
+
+### 📊 Analytics Dashboard
+
+* Top detected object classes
+* Confidence distribution analysis
+* Detection history tracking
+* Export analytics reports
+
+### ⚙️ Model Configuration
+
+* Support for YOLOv8n / YOLOv8s / YOLOv8m / YOLOv8l / YOLOv8x
+* Adjustable confidence threshold
+* Adjustable IoU threshold
+* COCO dataset class support (80 classes)
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* YOLOv8 (Ultralytics)
+* Streamlit
+* OpenCV
+* NumPy
+* Pandas
+* Plotly
+
+---
+
+## 📂 Project Structure
+
+```text
+detectai_v2/
+│
+├── app.py
+├── requirements.txt
+├── render.yaml
+│
+├── pages/
+│   ├── image_detection.py
+│   ├── live_camera.py
+│   ├── analytics.py
+│   └── model_config.py
+│
+├── utils/
+│   └── detector.py
+│
+└── exports/
+```
+
+## 🚀 Installation
+
+Clone the repository:
 
 ```bash
-# 1. Clone / download this folder
-cd detectai_v2
+git clone https://github.com/geeta3521/DetectAI-V2.git
+cd DetectAI-V2
+```
 
-# 2. Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate        # Linux / Mac
-venv\Scripts\activate           # Windows
+Install dependencies:
 
-# 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Run the app
+Run the application:
+
+```bash
 streamlit run app.py
 ```
 
-The app opens at **http://localhost:8501**
+Open:
 
-YOLOv8 weights (yolov8s.pt, ~22 MB) download automatically on first run.
-
-## Project Structure
-
-```
-detectai_v2/
-├── app.py                   # Entry point — sidebar nav
-├── requirements.txt
-├── README.md
-├── pages/
-│   ├── image_detection.py   # Upload & detect page
-│   ├── live_camera.py       # Webcam detection page
-│   ├── analytics.py         # Session analytics dashboard
-│   └── model_config.py      # Model & threshold settings
-└── utils/
-    ├── detector.py          # YOLOv8 inference engine
-    ├── session.py           # Session state / history manager
-    └── styles.py            # CSS injection
+```text
+http://localhost:8501
 ```
 
-## Deployment (free)
+---
 
-### Render
-1. Push to GitHub
-2. New Web Service → connect repo
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
+## 🎯 Supported Object Classes
 
-### Railway
-Same as above — Railway auto-detects Streamlit.
+The model supports detection of 80 COCO dataset classes including:
 
-### Streamlit Community Cloud (easiest)
-1. Push to GitHub
-2. Go to share.streamlit.io → Deploy → point to `app.py`
-3. Free, automatic HTTPS, custom subdomain
+* Person
+* Car
+* Bus
+* Truck
+* Bicycle
+* Dog
+* Cat
+* Chair
+* Laptop
+* Mobile Phone
 
-## Resume Line
+and many more.
 
-> Built and deployed DetectAI v2.0 — a real-time object detection web app using YOLOv8 + Streamlit with CSV/annotation export, class analytics dashboard, and live webcam detection. Deployed on [Render/Railway]. [your-live-url]
+---
 
-## Tech Stack
+## 📈 Future Enhancements
 
-- **Model**: YOLOv8 (Ultralytics) — COCO 80 classes
-- **Frontend**: Streamlit
-- **CV**: OpenCV
-- **Data**: Pandas, NumPy
-- **Export**: CSV, YOLO .txt, JPEG
+* Video Upload Detection
+* Object Tracking (DeepSORT/ByteTrack)
+* AI-Powered Detection Reports
+* Cloud Deployment
+* Multi-Camera Support
+* Custom Model Training
+
+---
+
+## 👩‍💻 Author
+
+**Geeta A N**
+
+GitHub: https://github.com/geeta3521
+
+LinkedIn: https://linkedin.com/in/geeta-nemgouda/
+
+---
+
+
