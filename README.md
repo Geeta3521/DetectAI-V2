@@ -20,9 +20,8 @@
      Tools: ShareX (Windows) · Kap (Mac) · peek (Linux)
      Then upload the GIF to your repo and replace the src below -->
 
-![DetectAI V2 Demo](https://via.placeholder.com/900x450/0f1117/4f8ef7?text=📸+Add+your+app+screenshot+or+GIF+here)
+![DetectAI V2 Demo](screenshots/demo.png)
 
-*Replace the image above with a real screenshot or GIF of your app for maximum recruiter impact*
 
 </div>
 
